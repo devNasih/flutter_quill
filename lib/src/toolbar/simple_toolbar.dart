@@ -47,7 +47,6 @@ class QuillSimpleToolbar extends StatelessWidget
 
   @override
   Widget build(BuildContext context) {
-
     List<Widget> childrenBuilder(BuildContext context) {
       final toolbarConfigurations =
           context.requireQuillSimpleToolbarConfigurations;
@@ -155,18 +154,18 @@ class QuillSimpleToolbar extends StatelessWidget
             ),
         ],
         [
-          if (configurations.showAlignmentButtons)
-            QuillToolbarSelectAlignmentButtons(
-              controller: controller,
-              options: toolbarConfigurations
-                  .buttonOptions.selectAlignmentButtons
-                  .copyWith(
-                showLeftAlignment: configurations.showLeftAlignment,
-                showCenterAlignment: configurations.showCenterAlignment,
-                showRightAlignment: configurations.showRightAlignment,
-                showJustifyAlignment: configurations.showJustifyAlignment,
-              ),
-            ),
+          // if (configurations.showAlignmentButtons)
+          //   QuillToolbarSelectAlignmentButtons(
+          //     controller: controller,
+          //     options: toolbarConfigurations
+          //         .buttonOptions.selectAlignmentButtons
+          //         .copyWith(
+          //       showLeftAlignment: configurations.showLeftAlignment,
+          //       showCenterAlignment: configurations.showCenterAlignment,
+          //       showRightAlignment: configurations.showRightAlignment,
+          //       showJustifyAlignment: configurations.showJustifyAlignment,
+          //     ),
+          //   ),
           if (configurations.showDirection)
             QuillToolbarToggleStyleButton(
               attribute: Attribute.rtl,
@@ -214,33 +213,33 @@ class QuillSimpleToolbar extends StatelessWidget
               options: toolbarConfigurations.buttonOptions.toggleCheckList,
               controller: controller,
             ),
-          if (configurations.showCodeBlock)
-            QuillToolbarToggleStyleButton(
-              attribute: Attribute.codeBlock,
-              options: toolbarConfigurations.buttonOptions.codeBlock,
-              controller: controller,
-            ),
+          // if (configurations.showCodeBlock)
+          //   QuillToolbarToggleStyleButton(
+          //     attribute: Attribute.codeBlock,
+          //     options: toolbarConfigurations.buttonOptions.codeBlock,
+          //     controller: controller,
+          //   ),
         ],
-        [
-          if (configurations.showQuote)
-            QuillToolbarToggleStyleButton(
-              options: toolbarConfigurations.buttonOptions.quote,
-              controller: controller,
-              attribute: Attribute.blockQuote,
-            ),
-          if (configurations.showIndent)
-            QuillToolbarIndentButton(
-              controller: controller,
-              isIncrease: true,
-              options: toolbarConfigurations.buttonOptions.indentIncrease,
-            ),
-          if (configurations.showIndent)
-            QuillToolbarIndentButton(
-              controller: controller,
-              isIncrease: false,
-              options: toolbarConfigurations.buttonOptions.indentDecrease,
-            ),
-        ],
+        // [
+        //   if (configurations.showQuote)
+        //     QuillToolbarToggleStyleButton(
+        //       options: toolbarConfigurations.buttonOptions.quote,
+        //       controller: controller,
+        //       attribute: Attribute.blockQuote,
+        //     ),
+        //   if (configurations.showIndent)
+        //     QuillToolbarIndentButton(
+        //       controller: controller,
+        //       isIncrease: true,
+        //       options: toolbarConfigurations.buttonOptions.indentIncrease,
+        //     ),
+        //   if (configurations.showIndent)
+        //     QuillToolbarIndentButton(
+        //       controller: controller,
+        //       isIncrease: false,
+        //       options: toolbarConfigurations.buttonOptions.indentDecrease,
+        //     ),
+        // ],
         [
           if (configurations.showLink)
             toolbarConfigurations.linkStyleType.isOriginal

@@ -9,7 +9,6 @@ import '../buttons/link_style2_button.dart';
 import '../buttons/link_style_button.dart';
 import '../buttons/search/legacy/legacy_search_button.dart';
 import '../buttons/search/search_button.dart';
-import '../embed/embed_button_builder.dart';
 import '../theme/quill_dialog_theme.dart';
 import '../theme/quill_icon_theme.dart';
 import 'simple_toolbar_button_options.dart';
@@ -107,7 +106,6 @@ class QuillSimpleToolbarConfigurations extends QuillSharedToolbarProperties {
     this.showClearFormat = true,
     this.showAlignmentButtons = false,
     this.showLeftAlignment = true,
-    this.showCenterAlignment = true,
     this.showRightAlignment = true,
     this.showJustifyAlignment = true,
     this.showHeaderStyle = true,
@@ -199,7 +197,6 @@ class QuillSimpleToolbarConfigurations extends QuillSharedToolbarProperties {
 
   final bool showAlignmentButtons;
   final bool showLeftAlignment;
-  final bool showCenterAlignment;
   final bool showRightAlignment;
   final bool showJustifyAlignment;
   final bool showHeaderStyle;
