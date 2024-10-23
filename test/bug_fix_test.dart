@@ -21,12 +21,7 @@ void main() {
               body: QuillSimpleToolbar(
                 controller: controller,
                 configurations: const QuillSimpleToolbarConfigurations(
-                  showRedo: false,
-                  customButtons: [
-                    QuillToolbarCustomButtonOptions(
-                      tooltip: tooltip,
-                    )
-                  ],
+              
                 ),
               ),
             ),
